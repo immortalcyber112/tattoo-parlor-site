@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parliament Tattoos | Tattoo Studio, Lagos</title>
+  <meta name="description" content="Parliament Tattoos, a tattoo studio in Lagos. Free consultations, artist-led custom work, and online deposit booking." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <a href="#top" class="logo">Parliament Tattoos</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#team">Artists</a>
+      <a href="#policies">Policies</a>
+      <a href="#gallery">Work</a>
+      <a href="#book">Book</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#book" class="btn btn-small nav-cta">Book now</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Custom tattoos &middot; Lagos</p>
+      <h1>Parliament Tattoos</h1>
+      <p class="hero-sub">Artist-first custom tattoo studio. Free consultations, clear policies, and every piece designed with you.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-primary">Book now</a>
+        <a href="#gallery" class="btn btn-ghost">See our work</a>
+      </div>
+    </div>
+    <a href="#services" class="scroll-hint" aria-label="Scroll to services">Scroll</a>
+  </section>
+
+  <!-- SERVICES & PRICING -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="eyebrow">What we do</p>
+      <h2 class="section-title">Services &amp; pricing</h2>
+      <p class="section-lead">PLACEHOLDER PRICES. Every &#8358; amount below is a placeholder until you set real prices in <code>js/app.js</code> (the SERVICES list).</p>
+      <div class="services-grid" id="services-grid"></div>
+      <p class="fine-print">Your deposit is applied to your final price. Final price is confirmed at consultation.</p>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section-alt" id="team">
+    <div class="container">
+      <p class="eyebrow">Artists</p>
+      <h2 class="section-title">Meet the team</h2>
+      <p class="section-lead">Every piece is drawn and tattooed by the artist you book. Bios are placeholders until you fill them in.</p>
+      <div class="services-grid">
+        <article class="service-card"><h3>Artist name</h3><p class="muted small">Specialty: placeholder</p><p>Your artist bio here</p></article>
+        <article class="service-card"><h3>Artist name</h3><p class="muted small">Specialty: placeholder</p><p>Your artist bio here</p></article>
+        <article class="service-card"><h3>Artist name</h3><p class="muted small">Specialty: placeholder</p><p>Your artist bio here</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICIES -->
+  <section class="section" id="policies">
+    <div class="container narrow">
+      <p class="eyebrow">Before you book</p>
+      <h2 class="section-title">Studio policies</h2>
+      <div class="faq">
+        <details open>
+          <summary>Deposit to book</summary>
+          <p>A deposit is required to secure your appointment. The deposit is applied to your final price, and the amount is shown at checkout. PLACEHOLDER: deposit terms and refund rules.</p>
+        </details>
+        <details>
+          <summary>18+ only, valid ID</summary>
+          <p>You must be 18 or older. Every client must show a valid government photo ID at the appointment. PLACEHOLDER: minor and consent policy.</p>
+        </details>
+        <details>
+          <summary>Free consultation</summary>
+          <p>Consultations are free. We discuss subject, size, placement and detail before we quote your piece. PLACEHOLDER: consult booking method.</p>
+        </details>
+        <details>
+          <summary>Large pieces and same-day</summary>
+          <p>Large pieces are not done same-day. They are planned with a consult and booked for a later session. PLACEHOLDER: lead time for large work.</p>
+        </details>
+        <details>
+          <summary>Walk-ins</summary>
+          <p>Walk-ins are welcome for small pieces and piercings when an artist has a gap. Booked appointments come first. PLACEHOLDER: walk-in hours.</p>
+        </details>
+        <details>
+          <summary>Aftercare</summary>
+          <p>Keep the wrap on for the time your artist gives you. Wash gently with unscented soap, pat dry, apply a thin layer of the recommended balm, and avoid sun, swimming and picking for at least two weeks. You will get written aftercare instructions after each session.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <p class="eyebrow">Portfolio</p>
+      <h2 class="section-title">Recent work</h2>
+      <p class="section-lead">PLACEHOLDER IMAGES from other artists, for layout only. Replace with your own work before launch (see README).</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- BOOKING FLOW -->
+  <section class="section" id="book">
+    <div class="container">
+      <p class="eyebrow">Booking</p>
+      <h2 class="section-title">Book your session</h2>
+      <p class="section-lead">Fill in your details, pick a date and time, then pay the deposit to lock your slot.</p>
+
+      <ol class="steps" id="steps-indicator">
+        <li data-step-ind="1" class="active"><span>1</span> Details</li>
+        <li data-step-ind="2"><span>2</span> Deposit</li>
+        <li data-step-ind="3"><span>3</span> Confirmed</li>
+      </ol>
+
+      <div class="booking-card">
+        <!-- Step 1: details -->
+        <div class="step active" data-step="1">
+          <h3>Your details &amp; design</h3>
+          <form id="booking-form" novalidate>
+            <label class="field">
+              <span>Full name</span>
+              <input type="text" id="f-name" autocomplete="name" placeholder="Jane Doe" required />
+              <small class="err" id="err-name"></small>
+            </label>
+            <label class="field">
+              <span>Phone number</span>
+              <input type="tel" id="f-phone" autocomplete="tel" placeholder="+234 800 000 0000" required />
+              <small class="err" id="err-phone"></small>
+            </label>
+            <label class="field">
+              <span>Email (for your receipt)</span>
+              <input type="email" id="f-email" autocomplete="email" placeholder="you@example.com" required />
+              <small class="err" id="err-email"></small>
+            </label>
+            <label class="field">
+              <span>Service</span>
+              <select id="f-service" required></select>
+              <small class="err" id="err-service"></small>
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Preferred date</span>
+                <input type="date" id="f-date" required />
+                <small class="err" id="err-date"></small>
+              </label>
+              <label class="field">
+                <span>Preferred time</span>
+                <select id="f-time" required></select>
+                <small class="err" id="err-time"></small>
+              </label>
+            </div>
+            <p class="hours-note" id="hours-note"></p>
+            <label class="field">
+              <span>Design notes (optional)</span>
+              <textarea id="f-notes" rows="4" placeholder="Placement, size, reference images you have, allergies..."></textarea>
+            </label>
+            <div class="step-actions">
+              <span></span>
+              <button type="submit" class="btn btn-primary">Continue to deposit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2: deposit -->
+        <div class="step" data-step="2">
+          <h3>Pay your deposit</h3>
+          <div class="summary" id="summary"></div>
+          <div class="pay-box">
+            <p class="ph-badge">Demo mode: payment on hold</p>
+            <p class="muted small">Payment runs through Flutterwave's secure checkout. Your deposit secures your slot and is applied to your final price.</p>
+            <p class="pay-amount">Deposit: <strong id="pay-amount">&#8358; --</strong></p>
+            <button class="btn btn-primary btn-block" id="pay-btn" type="button">Pay deposit with Flutterwave</button>
+            <p class="muted small" id="pay-status"></p>
+          </div>
+          <div class="step-actions">
+            <button class="btn btn-ghost" type="button" data-back="1">Back</button>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Step 3: receipt -->
+        <div class="step" data-step="3">
+          <div class="receipt" id="receipt">
+            <div class="receipt-head">
+              <p class="logo">Parliament Tattoos</p>
+              <p class="muted small">Booking receipt</p>
+            </div>
+            <h3>Deposit received</h3>
+            <div class="ref-box">
+              <span class="muted small">Show this reference at the front desk</span>
+              <strong class="ref" id="r-ref">--</strong>
+            </div>
+            <dl class="receipt-rows">
+              <div><dt>Name</dt><dd id="r-name"></dd></div>
+              <div><dt>Service</dt><dd id="r-service"></dd></div>
+              <div><dt>Date</dt><dd id="r-date"></dd></div>
+              <div><dt>Time</dt><dd id="r-time"></dd></div>
+              <div><dt>Amount paid</dt><dd id="r-amount"></dd></div>
+              <div><dt>Flutterwave transaction ID</dt><dd id="r-txid"></dd></div>
+              <div><dt>Status</dt><dd id="r-status"></dd></div>
+            </dl>
+            <p class="muted small">Arrive 5 minutes early with valid photo ID. Keep this reference.</p>
+          </div>
+          <div class="receipt-actions">
+            <button class="btn btn-ghost" type="button" onclick="window.print()">Print</button>
+            <button class="btn btn-primary" type="button" id="new-booking">Book another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container narrow">
+      <p class="eyebrow">Questions</p>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>What are your opening hours?</summary>
+          <p>PLACEHOLDER: opening hours to be confirmed. Edit HOURS in js/app.js.</p>
+        </details>
+        <details>
+          <summary>Do you take walk-ins?</summary>
+          <p>Walk-ins are welcome for small pieces and piercings when an artist has a gap. Booked appointments come first.</p>
+        </details>
+        <details>
+          <summary>How does the deposit work?</summary>
+          <p>A deposit is required to book. It is applied to your final price. PLACEHOLDER: rescheduling terms.</p>
+        </details>
+        <details>
+          <summary>How long does a tattoo take?</summary>
+          <p>PLACEHOLDER: a small piece is usually under an hour, a medium piece one to three hours, and larger work is split into sessions.</p>
+        </details>
+        <details>
+          <summary>What about aftercare?</summary>
+          <p>PLACEHOLDER: keep the wrap on for the time your artist gives you, wash gently with unscented soap, pat dry, apply a thin layer of recommended balm, and avoid sun, swimming and picking for at least two weeks.</p>
+        </details>
+        <details>
+          <summary>Am I too young or do I need consent?</summary>
+          <p>You must be 18 or older. Valid government photo ID is required at your appointment.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <p class="logo">Parliament Tattoos</p>
+        <p class="muted">Address: (blank, to be added)<br />Phone: (blank, to be added)<br />Email: (blank, to be added)</p>
+      </div>
+      <div>
+        <p class="muted">Social links: (blank, to be added)</p>
+        <p class="muted small">&copy; <span id="year"></span> Parliament Tattoos. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI CHAT ASSISTANT -->
+  <button class="chat-fab" id="chat-fab" aria-label="Open chat assistant" aria-expanded="false" aria-controls="chat-panel">Chat</button>
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Shop assistant" hidden>
+    <div class="chat-head">
+      <strong>Shop assistant</strong>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <form class="chat-form" id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask about prices, hours, booking..." autocomplete="off" />
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

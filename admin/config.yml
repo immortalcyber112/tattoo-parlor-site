@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: immortalcyber112/tattoo-parlor-site
+  branch: main
+  # Login needs an OAuth proxy. Deploy the Supabase edge function described in SETUP-SUPABASE.md
+  # and put its URL here. Until then, login will not work.
+  base_url: https://YOUR-PROJECT-REF.supabase.co/functions/v1/decap-oauth
+  auth_endpoint: auth
+
+local_backend: false
+
+media_folder: "uploads"
+public_folder: "uploads"
+
+publish_mode: simple
+
+collections:
+  - name: gallery
+    label: "Gallery (tattoo designs)"
+    file: "content/gallery.json"
+    fields:
+      - label: "Gallery items"
+        name: items
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Image", name: image, widget: image, required: true }
+          - { label: "Title", name: title, widget: string, required: false }
+          - { label: "Alt text (describe the tattoo)", name: alt, widget: string, required: true }
+          - { label: "Artist", name: artist, widget: string, required: false }
+
+  - name: settings
+    label: "Site settings (services, prices, hours, about)"
+    file: "content/settings.json"
+    fields:
+      - { label: "Shop name", name: shop_name, widget: string }
+      - { label: "About text", name: about, widget: text }
+      - label: "Services and prices"
+        name: services
+        widget: list
+        summary: "{{fields.name}} ({{fields.price}})"
+        fields:
+          - { label: "Service id (no spaces)", name: id, widget: string }
+          - { label: "Name", name: name, widget: string }
+          - { label: "Description", name: desc, widget: string }
+          - { label: "Price (naira)", name: price, widget: number, value_type: int }
+          - { label: "Deposit (naira)", name: deposit, widget: number, value_type: int }
+          - { label: "Minutes", name: minutes, widget: number, value_type: int }
+      - label: "Opening hours"
+        name: hours
+        widget: list
+        summary: "{{fields.day}}: {{fields.open}} to {{fields.close}}"
+        fields:
+          - { label: "Day (Sunday, Monday ...)", name: day, widget: string }
+          - { label: "Open (24h, e.g. 11:00)", name: open, widget: string }
+          - { label: "Close (24h, e.g. 18:00)", name: close, widget: string }
+          - { label: "Closed this day", name: closed, widget: boolean, default: false }

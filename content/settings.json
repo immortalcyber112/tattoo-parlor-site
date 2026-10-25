@@ -1,0 +1,21 @@
+{
+  "shop_name": "Parliament Tattoos",
+  "about": "PLACEHOLDER: write a short paragraph about the studio and its artists.",
+  "services": [
+    { "id": "fineline", "name": "Fine line", "desc": "Delicate single-needle and fine-line work.", "price": 0, "deposit": 0, "minutes": 120 },
+    { "id": "blackwork", "name": "Blackwork / geometric", "desc": "Bold solid black and geometric patterns.", "price": 0, "deposit": 0, "minutes": 180 },
+    { "id": "dotwork", "name": "Dotwork", "desc": "Stippled dot shading and fine detail.", "price": 0, "deposit": 0, "minutes": 180 },
+    { "id": "neotrad", "name": "Neo-traditional", "desc": "Bold outlines and rich colour in a modern traditional style.", "price": 0, "deposit": 0, "minutes": 180 },
+    { "id": "micro", "name": "Micro-realism", "desc": "Small, highly detailed realistic pieces.", "price": 0, "deposit": 0, "minutes": 120 },
+    { "id": "consult", "name": "Custom design consult", "desc": "Free consultation to plan your design, size and placement.", "price": 0, "deposit": 0, "minutes": 30 }
+  ],
+  "hours": [
+    { "day": "Sunday", "open": "", "close": "", "closed": true },
+    { "day": "Monday", "open": "", "close": "", "closed": true },
+    { "day": "Tuesday", "open": "11:00", "close": "18:00", "closed": false },
+    { "day": "Wednesday", "open": "11:00", "close": "18:00", "closed": false },
+    { "day": "Thursday", "open": "11:00", "close": "18:00", "closed": false },
+    { "day": "Friday", "open": "11:00", "close": "18:00", "closed": false },
+    { "day": "Saturday", "open": "11:00", "close": "18:00", "closed": false }
+  ]
+}
